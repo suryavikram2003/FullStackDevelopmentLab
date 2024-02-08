@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Movie Details</title>
+  <style>
+    div#maincontent {
+      height: 100px;
+      width: 500px;
+      border: 1px solid #CEE2FA;
+      text-align: left;
+      color: #08438E;
+      font-family: calibri;
+      font-size: 20;
+      padding: 5px;
+    }
+
+    div#heading {
+      text-decoration: bold;
+      text-align: center;
+      margin-top: 80px;
+      width: 500px;
+      border: 1px solid #CEE2FA;
+      text-align: center;
+      color: #08438E;
+      background-color: #CEE2FA;
+      font-family: calibri;
+      font-size: 20;
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <div id="heading">Movie Details</div>
+    <div id="maincontent">
+      <label for="movieName">Enter Movie Name:</label>
+      <input type="text" id="movieName" />
+      <button onclick="displayMovieDetails()">Submit</button>
+
+      <p id="movieDetails"></p>
+
+      <script>
+        function displayMovieDetails() {
+          // Initialize variables with values
+          const movieName = document.getElementById('movieName').value;
+          const language = 'English'; // Replace with the actual language of the movie
+          const ratings = 4.5; // Replace with the actual ratings of the movie
+
+          // Display movie details using template literals
+          const movieDetails = `Movie Name: ${movieName} <br> Language: ${language} <br> Ratings: ${ratings}`;
+
+          // Update the content of the maincontent div
+          document.getElementById('movieDetails').innerHTML = movieDetails;
+        }
+      </script>
+    </div>
+  </center>
+</body>
+
+</html>
